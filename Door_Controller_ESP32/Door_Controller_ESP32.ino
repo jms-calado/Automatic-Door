@@ -191,8 +191,8 @@ void loop() {
       }
     }
     else{
-      if(distance < openZone)
-        if(distance > safeZone)
+      if(distance > safeZone)
+        if(distance < openZone)
           zoneTime += delayTime;
       else
         zoneTime = 0;
