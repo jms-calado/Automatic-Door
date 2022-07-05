@@ -42,7 +42,7 @@ Change ```const char* mqtt_server = "192.168.0.100";``` to the ip of the MQTT Br
 Change ```const char *wifi_ssid = "SSID";``` to the WLAN SSID  
 Change ```const char *wifi_password = "PASSWORD";``` to the WLAN Password  
 Change ```Ultrasonic ultrasonic(25, 26);";``` to the TRIG (25) and ECHO (26) pins of the HC-SR04  
-Change ```const int openZone = 130;";``` to the desired máximum proximity distance (cm) for door operation  
+Change ```const int openZone = 130;";``` to the desired maximum proximity distance (cm) for door operation  
 Change ```const int safeZone = 60;";``` to the desired minimum proximity distance (cm) for door operation (should be equal or greater than the lenght of the door)  
 
 ## Functioning
