@@ -22,7 +22,18 @@ Pedro Oliveira (Original Developer) & Jorge S. Calado (Supervisor)
 - MQTT Broker for message queuing
 
 ## Installation
-TDB
+1. Connect the Linear Actuator to the LAC board:  
+<img src="/images/lac%2Bla.png" alt="P-16" width="200"/> <img src="/images/p16-p-family.png" alt="P-16" width="400"/>  
+2. Connect the LAC RC and GND(-) pins to the ESP32 (pin 27 and GND):  
+<img src="/images/lac%2Besp.png" alt="P-16" width="200"/> <img />  
+3. Connect the 12V VCC(+) and GND to the LAC:  
+<img src="/images/lac%2Bpw.png" alt="P-16" width="200"/> <img />  
+4. Connect the HC-SR04 VCC and GND pins to the ESP32 3V and GND outputs, and the TRIG and ECHO pins to the D25 and D26 data pins:  
+<img src="/images/esp32-pico-kit-pinouts.png" alt="P-16" width="300"/> <img src="/images/HC-SR04.png" alt="P-16" width="200"/>  
+5. Connect the VCC (5V) and GND to the ESP pins  
+6. Verify all connections are correct and secure
+7. Change the configurations and upload the code to the ESP  
+8. Switch on the power sources -> WARNING: the door will open and close (once) on the system power-on!  
 
 ## Configurations
 Door_Controller_ESP32.ino  
@@ -36,6 +47,6 @@ Change ```const int safeZone = 60;";``` to the desired minimum proximity distanc
 
 ## Functioning
 3 working modes:
-  - "Automatic"
-  - "Manual"
-  - "Open"
+  - "Automatic" - Door automaticaly opens (if presence detected between 60cm and 140cm), and closes (5 seconds after presence no longer detected);
+  - "Manual" - Door opens/closes only on command (if presence detected between 60cm and 140cm/5 seconds after presence no longer detected);
+  - "Open Mode" - Door opens/closes only on command regardless of distance to the door.
